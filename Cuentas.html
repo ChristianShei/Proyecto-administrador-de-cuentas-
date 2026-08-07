@@ -5,82 +5,87 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>Administrador de cuentas</title>
     <link rel='stylesheet' href='main.css'>
+    
 </head>
 
-
+            
 <body>
     <main> 
-<header>
-    <h1>Administrador de gastos</h1>
+        <header>
+
+            <h1>Administrador de gastos</h1>
    
-</header>
-<section id="resumen">
-    <div>
-        <h2>Saldo actual</h2>
-        <p id="saldo">$0</p>
-    </div>
-    <div >
-        <h2>Ingresos</h2>
-        <p id="ingresos">$0</p>
-    </div>
-    <div >
-        <h2>Gastos</h2>
-        <p id="gastos">$0</p>
-    </div>
-</section>
-<section id="formulario">
-<form >
+        </header>
+        <section id="resumen">
+            <div>
+                <h2>Saldo actual</h2>
+                <p id="saldo">$0</p>
+            </div>
+            <div >
+                <h2>Ingresos</h2>
+                <p id="ingresos">$0</p>
+            </div>
+            <div >
+                <h2>Gastos</h2>
+                <p id="gastos">$0</p>
+            </div>
+        </section>
+        <section id="formulario">
+        <form id="form-gastos" >
     
-    <div>
-        <label for="descripcion">Descripción</label>
-            <input type="text" id="descripcion"> 
-    </div>
+                <div>
+                    <label for="descripcion">Descripción</label>
+                     <input type="text" id="descripcion"> 
+                </div>
 
-    <div>
-        <label for="monto">Monto</label>
-            <input type="number" id="monto">
-    </div>
+                <div>
+                    <label for="monto">Monto</label>
+                     <input type="number" id="monto">
+                </div>
     
    
 
-    <h2>Tipo</h2>
-    <div>
-        <label for="ingresos1">Ingresos</label>
-        <input type="radio" id="ingresos1" name="tipo">
-    </div>
-    <div>
-        <label for="gastos1">Gastos</label>
-        <input type="radio" id="gastos1" name="tipo">
-    </div>
+                <h2>Tipo</h2>
+                <div class="campo">
+                    <label for="ingresos1" >Ingresos</label>
+                    <input type="radio" id="ingresos1" name="tipo" value="ingreso">
+                </div>
+                <div class="campo">
+                    <label for="gastos1">Gastos</label>
+                    <input type="radio" id="gastos1" name="tipo" value="gasto">
+                </div>
 
-<h2>Categoría</h2>
-<select name="categoria" id="categoria">
+                <h2>Categoría</h2>
+                <select name="categoria" id="categoria">
 
-    <option value="comida">Comida</option>
-    <option value="transporte">Transporte</option>
-    <option value="hogar">Hogar</option>
-    <option value="entrenamiento">Entrenamiento</option>
-    <option value="educacion">Educación</option>
-    <option value="otros">Otros</option>
+                    <option value="comida">Comida</option>
+                    <option value="transporte">Transporte</option>
+                    <option value="hogar">Hogar</option>
+                    <option value="entrenamiento">Entrenamiento</option>
+                    <option value="educacion">Educación</option>
+                    <option value="otros">Otros</option>
 
-</select>
-<div>
-<button type="submit">Agregar movimiento</button>
-</div>
-</form>
-<section>
-    <h2>Movimientos</h2>
-    <div id="lista-movimientos">
+                </select>
+                <div>
+                    <button type="submit">Agregar movimiento</button>
+                </div>
+        </form>
+        <section>
+            <h2>Movimientos</h2>
+            <div id="lista-movimientos">
 
-    </div>
+            </div>
+        </section>
+
 </section>
 
-</section>
 
 
 
+    </main>
 
-</main>
+<script src="script.js"></script>
+ 
 </body>
 
 
