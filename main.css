@@ -19,7 +19,9 @@ button:hover{
     background-color: green;
 }
 
-    
+   /* .campo{
+    display: flex;
+    flex-direction: ;}*/
 
 input[type="text"],
 input[type="number"],
@@ -46,3 +48,7 @@ flex: 1;
 background-color:white;
 box-shadow: 0 2px 8px rgba(0,0, 0,.1);
 }
+
+#prueba{
+  display: flex;
+    gap: 20px;}
