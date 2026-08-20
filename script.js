@@ -35,20 +35,20 @@ function mostrarMovimientos (){
     listaDeMovimientos.innerHTML = ""
     movimientos.forEach((movimiento, indice) =>{
     
-    const nuevoMovimiento = document.createElement("div")
-    nuevoMovimiento.classList.add("movimiento")
-    const botonEliminar = document.createElement("button")
-    botonEliminar.textContent = "Eliminar"
-    
+        const nuevoMovimiento = document.createElement("div")
+        nuevoMovimiento.classList.add("movimiento")
+
+        const botonEliminar = document.createElement("button")
+        botonEliminar.textContent = "Eliminar"
+
+    //EVENTO BOTON
     botonEliminar.addEventListener("click", ()=>{
         movimientos.splice(indice,1)
            console.log("Después:", movimientos);
-    guardarMovimientos()
-    mostrarMovimientos();
-    actualizarResumen();
+            guardarMovimientos()
+            mostrarMovimientos();
+            actualizarResumen();
 
-    
-        
     })
 
     if (movimiento.tipo === "gastos"){
@@ -58,14 +58,14 @@ function mostrarMovimientos (){
     }
     console.log(indice, movimientos)
     nuevoMovimiento.innerHTML=`
-    <h3>${movimiento.descripcion}</h3>
-    <p>${movimiento.monto}</p>
-    <div id="prueba">
-        <p>${movimiento.categoria}</p> 
-        <p>|</p> 
-        <p>${movimiento.tipo}</p>
-        
-    </div>
+
+        <h3>${movimiento.descripcion}</h3>
+        <p>$${movimiento.monto}</p>
+        <div id="prueba">
+            <p>${movimiento.categoria}</p> 
+            <p>|</p> 
+            <p>${movimiento.tipo}</p>
+        </div>
     `
   listaDeMovimientos.appendChild(nuevoMovimiento)
   nuevoMovimiento.appendChild(botonEliminar)
