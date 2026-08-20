@@ -65,7 +65,7 @@ function mostrarMovimientos (){
       document.getElementById("monto").value = movimiento.monto;
       document.getElementById("categoria").value = movimiento.categoria  
 
-      if(movimientos === "gastos"){
+      if(movimiento.tipo === "gastos"){
         document.querySelector('input[value= "gastos"]').checked = true
       }else{
         document.querySelector('input[value= "ingresos"]').checked = true
